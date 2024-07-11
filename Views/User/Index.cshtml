@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ETC_internship.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullNameKZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullNameRU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortNameKZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortNameRU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FIODatPadejKZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FIODatPadejRU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActivated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HashedPassword)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullNameKZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullNameRU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortNameKZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortNameRU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FIODatPadejKZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FIODatPadejRU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActivated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HashedPassword)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
